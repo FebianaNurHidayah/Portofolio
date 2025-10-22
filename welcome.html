@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Welcome Animation Header with Centered Boxes</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        /* Reset and base */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-image: url(he.png);
+            color: black;
+            font-family: 'Inter', sans-serif;
+            background-size: cover;
+            background-position: center;
+            overflow-x: hidden;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            padding: 24px 16px 32px;
+            box-sizing: border-box;
+        }
+
+        /* Header style with scrolling text at top */
+        header {
+            width: 100%;
+            max-width: 100%;
+            overflow: hidden;
+            padding: 8px 0;
+            border: 3px solid #8b5cf6;
+            border-radius: 12px;
+            box-sizing: border-box;
+            user-select: none;
+            margin-bottom: 32px;
+            flex-shrink: 0;
+        }
+
+        header h1 {
+            white-space: nowrap;
+            display: inline-block;
+            animation: scrollLeftToRight 25s linear infinite;
+            padding: 8px 24px;
+            margin: 0;
+            font-weight: 700;
+            font-size: clamp(1rem, 4vw, 1.5rem);
+        }
+
+        @keyframes scrollLeftToRight {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            color: black;
+        }
+
+        .main-content h1 {
+            margin-bottom: clamp(150px, 50vw, 100px);
+            margin-top: 0;
+        }
+
+        /* Wrapper to center boxes vertically and horizontally below header */
+        .main-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 20px 20px;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: clamp(20px, 5vw, 50px);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: fit-content;
+        }
+
+        .box {
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 600;
+            user-select: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            font-family: 'Courier New', Courier, monospace;
+            width: clamp(100px, 20vw, 150px);
+            height: clamp(100px, 20vw, 150px);
+            aspect-ratio: 1;
+        }
+
+        .box1 {
+            background-image: url(card.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box2 {
+            background-image: url(racing.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box3 {
+            background-image: url(suit.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            body {
+                padding: 16px 12px 24px;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 20px;
+                max-width: 400px;
+                justify-items: center;
+            }
+
+            .box {
+                width: 120px;
+                height: 120px;
+            }
+
+            .box3 {
+                grid-column: 1 / -1;
+                width: 120px;
+                height: 120px;
+            }
+
+            header {
+                margin-bottom: 24px;
+            }
+        }
+
+        /* Very small screens */
+        @media (max-width: 480px) {
+            body {
+                padding: 12px 8px 20px;
+            }
+
+            .container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto auto;
+                gap: 15px;
+                max-width: 320px;
+                justify-items: center;
+            }
+
+            .box {
+                width: 100px;
+                height: 100px;
+                font-size: 0.9rem;
+            }
+
+            .box3 {
+                grid-column: 1 / -1;
+                width: 100px;
+                height: 100px;
+                font-size: 0.9rem;
+            }
+
+            header {
+                border-width: 2px;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Large screens */
+        @media (min-width: 1200px) {
+            .container {
+                gap: 60px;
+            }
+
+            .box {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* Landscape orientation on mobile */
+        @media (max-height: 500px) and (orientation: landscape) {
+            body {
+                padding: 8px 16px 16px;
+            }
+
+            .main-content {
+                padding: 10px 0;
+            }
+
+            .container {
+                gap: 15px;
+            }
+
+            .box {
+                min-height: 60px;
+            }
+
+            header {
+                margin-bottom: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮 welcome to bie.game 🎮</h1>
+    </header>
+
+    <div class="main-content">
+    <h1>wanna play?!</h1>
+    <div class="container">
+        <a href="two.html" class="box box1">Card Game</a>
+        <a href="one.html" class="box box2">Racing</a>
+        <a href="three.html" class="box box3">Suit Game</a>
+    </div>
+</div>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'99280b43b7d3585b',t:'MTc2MTEyNjEzOS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
