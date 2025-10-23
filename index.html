@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Digital - Siswa SIJA</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Digital - Siswa SIJA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             box-sizing: border-box;
@@ -237,7 +244,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="beranda" class="gradient-bg text-white min-h-full flex items-center pt-16">
+    <section id="beranda" class="gradient-bg text-white min-h-screen flex items-center pt-16">
         <!-- Floating Elements -->
         <div class="floating-elements">
             <div class="floating-element text-cyan-400 text-2xl" style="left: 10%; animation-delay: 0s;">💻</div>
@@ -251,18 +258,18 @@
             <div class="floating-element text-orange-400 text-lg" style="left: 90%; animation-delay: 1s;">⭐</div>
         </div>
         
-        <div class="max-w-6xl mx-auto px-4 py-20 relative z-10">
+        <div class="max-w-6xl mx-auto px-4 py-20 relative z-10 w-full">
             <div class="text-center animate-fade-in-up">
     <!-- Profile Photo -->
     <div class="w-32 h-32 rounded-full mx-auto mb-6 flex items-center justify-center border-4 border-cyan-400/50 shadow-lg overflow-hidden">
         <img src="pp.jpg" alt="Foto Profil" class="w-full h-full object-cover rounded-full">
     </div>
     <h1 class="text-4xl md:text-6xl font-bold mb-4 text-gradient">Halo, Saya Febiana</h1>
-    <p class="text-xl md:text-2xl mb-6 opacity-90 typing-animation">Siswa SMK Jurusan Sistem Informasi Jaringan dan Aplikasi</p>
+    <p class="text-xl md:text-2xl mb-6 opacity-90 typing-animation">Jurusan Sistem Informasi Jaringan dan Aplikasi</p>
     <p class="text-lg mb-8 opacity-80 max-w-2xl mx-auto">Sedang belajar dan mengembangkan kemampuan di bidang teknologi informasi dengan fokus pada pengembangan web dan jaringan komputer</p>
-    <div class="space-x-4">
-        <a href="#proyek" class="bg-cyan-400 text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-cyan-300 transition duration-300 shadow-lg shadow-cyan-400/25 animate-glow">Lihat Proyek</a>
-        <a href="#kontak" class="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-full font-semibold hover:bg-cyan-400 hover:text-slate-900 transition duration-300">Hubungi Saya</a>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#proyek" class="bg-cyan-400 text-slate-900 px-8 py-3 rounded-full font-semibold hover:bg-cyan-300 transition duration-300 shadow-lg shadow-cyan-400/25 animate-glow w-full sm:w-auto">Lihat Proyek</a>
+        <a href="#kontak" class="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-full font-semibold hover:bg-cyan-400 hover:text-slate-900 transition duration-300 w-full sm:w-auto">Hubungi Saya</a>
     </div>
 </div>
 
@@ -287,10 +294,6 @@
                 
                 <div class="grid md:grid-cols-2 gap-8 mb-6">
                     <div class="glass-effect p-6 rounded-lg shadow-lg card-hover">
-                        <h3 class="text-xl font-bold text-cyan-400 mb-6 flex items-center">
-                            <span class="text-2xl mr-3">🎓</span>
-                            Perjalanan Pendidikan
-                        </h3>
                         <div class="space-y-4">
                             <div class="relative">
                                 <div class="flex items-start space-x-4">
@@ -307,9 +310,9 @@
                                 <div class="flex items-start space-x-4">
                                     <div class="w-4 h-4 bg-blue-400 rounded-full mt-2 flex-shrink-0"></div>
                                     <div class="bg-slate-900 p-4 rounded-lg flex-1 shadow-sm border border-blue-500/20">
-                                        <div class="font-semibold text-white">SMP Negeri 130 Jakarta</div>
-                                        <div class="text-sm text-gray-300">2021 - 2024</div>
-                                        <div class="text-xs text-blue-400 mt-1 font-medium">Lulus</div>
+                                        <div class="font-semibold text-white">Usia</div>
+                                        <div class="text-sm text-gray-300">17 Tahun</div>
+                                        <div class="text-xs text-blue-400 mt-1 font-medium">2025</div>
                                     </div>
                                 </div>
                                 <div class="absolute left-2 top-6 w-0.5 h-12 bg-blue-400/50"></div>
@@ -317,9 +320,15 @@
                             <div class="flex items-start space-x-4">
                                 <div class="w-4 h-4 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                                 <div class="bg-slate-900 p-4 rounded-lg flex-1 shadow-sm border border-purple-500/20">
-                                    <div class="font-semibold text-white">SDI Ukhuwah Islamiyah</div>
-                                    <div class="text-sm text-gray-300">2015 - 2021</div>
-                                    <div class="text-xs text-purple-400 mt-1 font-medium">Lulus</div>
+                                    <div class="font-semibold text-white">Minat</div>
+                                    <div class="text-sm text-gray-300">Web Developer, Network Engineer, Cybersecurity</div>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4">
+                                <div class="w-4 h-4 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
+                                <div class="bg-slate-900 p-4 rounded-lg flex-1 shadow-sm border border-green-500/20">
+                                    <div class="font-semibold text-white">Lokasi</div>
+                                    <div class="text-sm text-gray-300">Jakarta, Indonesia</div>
                                 </div>
                             </div>
                         </div>
